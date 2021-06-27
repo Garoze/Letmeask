@@ -1,18 +1,18 @@
 import { FormEvent, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import logoImg from '../assets/images/logo.svg';
+import logoImg from '../../assets/images/logo.svg';
 
-import { Button } from '../components/Button';
-import { Question } from '../components/Question';
-import { RoomCode } from '../components/RoomCode';
+import { Button } from '../../components/Button';
+import { Question } from '../../components/Question';
+import { RoomCode } from '../../components/RoomCode';
 
-import { useAuth } from '../hooks/useAuth';
-import { useRoom } from '../hooks/useRoom';
+import { useAuth } from '../../hooks/useAuth';
+import { useRoom } from '../../hooks/useRoom';
 
-import { Database } from '../services/firebase';
+import { Database } from '../../services/firebase';
 
-import '../styles/room.scss';
+import './styles.scss';
 
 type RoomParams = {
   id: string;
@@ -102,7 +102,9 @@ export const Room = () => {
             ) : (
               <span>
                 Para enviar uma perguntar,&nbsp;
-                <button onClick={signInWithGoogle}>faça o seu login</button>
+                <button type="button" onClick={signInWithGoogle}>
+                  faça o seu login
+                </button>
               </span>
             )}
 
@@ -126,7 +128,7 @@ export const Room = () => {
                   className={`like-button ${question.likeId ? 'liked' : ''}`}
                   type="button"
                   aria-label="Marcar como gostei"
-                  onClick={(_e) => handleLikeQuestion(question.id, question.likeId)}
+                  onClick={() => handleLikeQuestion(question.id, question.likeId)}
                 >
                   {question.likeCount > 0 && <span>{question.likeCount}</span>}
                   <svg

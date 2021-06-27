@@ -1,18 +1,18 @@
 import { Link, useHistory, useParams } from 'react-router-dom';
 
-import logoImg from '../assets/images/logo.svg';
-import deleteImg from '../assets/images/delete.svg';
-import checkImg from '../assets/images/check.svg';
-import answerImg from '../assets/images/answer.svg';
+import logoImg from '../../assets/images/logo.svg';
+import deleteImg from '../../assets/images/delete.svg';
+import checkImg from '../../assets/images/check.svg';
+import answerImg from '../../assets/images/answer.svg';
 
-import { Button } from '../components/Button';
-import { Question } from '../components/Question';
-import { RoomCode } from '../components/RoomCode';
+import { Button } from '../../components/Button';
+import { Question } from '../../components/Question';
+import { RoomCode } from '../../components/RoomCode';
 
-import { useRoom } from '../hooks/useRoom';
+import { useRoom } from '../../hooks/useRoom';
+import { Database } from '../../services/firebase';
 
-import '../styles/room.scss';
-import { Database } from '../services/firebase';
+import './styles.scss';
 
 type RoomParams = {
   id: string;
@@ -38,7 +38,7 @@ export const AdminRoom = () => {
     // eslint-disable-next-line
     if (window.confirm('Tem certeza que deseja excluir essa pergunta?')) {
       await Database.ref(
-        `/rooms/${params.id}/questions/${questionId}`,
+        `/rooms/${params.id}/questions/${questionId}`
       ).remove();
     }
   };
