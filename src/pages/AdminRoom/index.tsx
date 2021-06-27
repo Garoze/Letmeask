@@ -10,7 +10,7 @@ import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
 
 import { useRoom } from '../../hooks/useRoom';
-import { Database } from '../../services/firebase';
+import { Database } from '../../services/Firebase';
 
 import './styles.scss';
 
@@ -38,7 +38,7 @@ export const AdminRoom = () => {
     // eslint-disable-next-line
     if (window.confirm('Tem certeza que deseja excluir essa pergunta?')) {
       await Database.ref(
-        `/rooms/${params.id}/questions/${questionId}`
+        `/rooms/${params.id}/questions/${questionId}`,
       ).remove();
     }
   };

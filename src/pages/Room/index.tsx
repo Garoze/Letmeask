@@ -10,7 +10,7 @@ import { RoomCode } from '../../components/RoomCode';
 import { useAuth } from '../../hooks/useAuth';
 import { useRoom } from '../../hooks/useRoom';
 
-import { Database } from '../../services/firebase';
+import { Database } from '../../services/Firebase';
 
 import './styles.scss';
 

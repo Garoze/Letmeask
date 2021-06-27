@@ -8,7 +8,7 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/useAuth';
 
-import { Database } from '../../services/firebase';
+import { Database } from '../../services/Firebase';
 
 import './styles.scss';
 
