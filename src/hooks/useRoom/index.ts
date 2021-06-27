@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { useAuth } from './useAuth';
-import { Database } from '../services/firebase';
+import { useAuth } from '../useAuth';
+import { Database } from '../../services/firebase';
 
 type FirebaseQuestions = Record<
   string,
@@ -54,7 +54,7 @@ export const useRoom = (roomId: string) => {
         isAnswered: value.isAnswered,
         likeCount: Object.values(value.likes ?? {}).length,
         likeId: Object.entries(value.likes ?? {}).find(
-          ([_key, like]) => like.authorId === user?.id,
+          ([, like]) => like.authorId === user?.id,
         )?.[0],
       }));
 
