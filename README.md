@@ -50,5 +50,5 @@ Remembering that you need to have a [Figma](http://figma.com/) account to access
 
 ## License
 
-This project is licensed under the terms of the MIT License. You can check out thr full license [here](https://github.com/Garoze/letmeask/blob/main/LICENSE).
+This project is licensed under the terms of the MIT License. You can check out the full license [here](https://github.com/Garoze/letmeask/blob/main/LICENSE).
 
