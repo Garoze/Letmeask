@@ -1,16 +1,16 @@
 import { FormEvent, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import logoImg from '../../assets/images/logo.svg';
+import logoImg from 'assets/images/logo.svg';
 
-import { Button } from '../../components/Button';
-import { Question } from '../../components/Question';
-import { RoomCode } from '../../components/RoomCode';
+import { Button } from 'components/Button';
+import { Question } from 'components/Question';
+import { RoomCode } from 'components/RoomCode';
 
-import { useAuth } from '../../hooks/useAuth';
-import { useRoom } from '../../hooks/useRoom';
+import { useAuth } from 'hooks/useAuth';
+import { useRoom } from 'hooks/useRoom';
 
-import { Database } from '../../services/Firebase';
+import { Database } from 'services/Firebase';
 
 import './styles.scss';
 

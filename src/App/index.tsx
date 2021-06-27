@@ -1,10 +1,11 @@
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-import { Home } from '../pages/Home';
-import { Room } from '../pages/Room';
-import { AdminRoom } from '../pages/AdminRoom';
-import { CreateRoom } from '../pages/CreateRoom';
-import { AuthContextProvider } from '../contexts/AuthContext';
+import { Home } from 'pages/Home';
+import { Room } from 'pages/Room';
+import { AdminRoom } from 'pages/AdminRoom';
+import { CreateRoom } from 'pages/CreateRoom';
+
+import { AuthContextProvider } from 'contexts/AuthContext';
 
 import './styles.scss';
 

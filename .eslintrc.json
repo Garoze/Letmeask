@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "amd": true
   },
   "extends": [
     "airbnb",
@@ -17,7 +18,8 @@
       "jsx": true
     },
     "ecmaVersion": 12,
-    "sourceType": "module"
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
   "plugins": ["react", "@typescript-eslint", "import"],
   "rules": {
@@ -31,5 +33,10 @@
     "react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
     // Typescript
     "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }

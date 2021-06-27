@@ -1,12 +1,12 @@
 import { Link, useHistory } from 'react-router-dom';
 import { FormEvent, useState } from 'react';
 
-import logoImg from '../../assets/images/logo.svg';
-import illustrationImg from '../../assets/images/illustration.svg';
+import logoImg from 'assets/images/logo.svg';
+import illustrationImg from 'assets/images/illustration.svg';
 
-import { Button } from '../../components/Button';
-import { useAuth } from '../../hooks/useAuth';
-import { Database } from '../../services/Firebase';
+import { Button } from 'components/Button';
+import { useAuth } from 'hooks/useAuth';
+import { Database } from 'services/Firebase';
 
 import './styles.scss';
 
@@ -54,7 +54,7 @@ export const CreateRoom = () => {
             <Button type="submit">Criar sala</Button>
           </form>
           <p>
-            Quer entrar em uma sala existente?
+            Quer entrar em uma sala existente?&nbsp;
             <Link to="/">clique aqui</Link>
           </p>
         </div>
